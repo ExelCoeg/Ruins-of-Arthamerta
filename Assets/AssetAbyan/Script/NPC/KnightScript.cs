@@ -13,7 +13,7 @@ public class KngihtScript : NPC
     [SerializeField] Boolean enemyDetected;//nanti bakal dipindahin ke player
     [SerializeField] float offSideTimer;
     [SerializeField] float knightDetection;
-    
+
     [Header("Knight")]
     private float attackTimer;
     [SerializeField] Collider2D objectInRangeAttack;
@@ -21,7 +21,8 @@ public class KngihtScript : NPC
     [SerializeField] private float KnightAttackSpeed;
     [SerializeField] private Transform attackPoint;
     [SerializeField] Boolean enemyInRangeAttack;
-    private void Awake() {
+    private void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
     }
     void Start()
@@ -54,45 +55,55 @@ public class KngihtScript : NPC
         setAnimationParameter();
         KnightAttack();
     }
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         NPCMovement();
     }
-    private void SetNPCAtribut(){
+    private void SetNPCAtribut()
+    {
         SetIdle(npcManager.knightIdleSet);
         knightDetection = npcManager.knightDetection;
         knightRangeAttack = npcManager.knightRangeAttack;
         KnightAttackSpeed = npcManager.knightAttackSpeed;
 
-        if (npcHealth != null) {}
+        if (npcHealth != null) { }
         {
-            npcHealth.maxHealth = (int)npcManager.knightHealth;   
+            npcHealth.maxHealth = (int)npcManager.knightHealth;
         }
     }
-    public override void Idle(Boolean isIdle){
-        if (isIdle){
+    public override void Idle(Boolean isIdle)
+    {
+        if (isIdle)
+        {
             this.isIdle = true;
             movSpeed = 0;
         }
-        else{
+        else
+        {
             this.isIdle = false;
             movSpeed = npcManager.kngihtMovSpeed;
         }
     }
-    public void KnightAttack(){
+    public void KnightAttack()
+    {
         attackTimer += Time.deltaTime;
-        if(enemyInRangeAttack){
+        if (enemyInRangeAttack)
+        {
             if (attackTimer > npcManager.knightAttackSpeed)
             {
                 animator.Play("KnightAttack");
                 attackTimer = 0;
             }
-        }else if(attackTimer > npcManager.knightAttackSpeed){
+        }
+        else if (attackTimer > npcManager.knightAttackSpeed)
+        {
             attackTimer = npcManager.knightAttackSpeed;
         }
     }
     public override void Attack()
     {
-        if(objectInRangeAttack != null){
+        if (objectInRangeAttack != null)
+        {
             IDamagable damagable = objectInRangeAttack.GetComponent<IDamagable>();
             if (damagable != null)
             {
@@ -100,38 +111,52 @@ public class KngihtScript : NPC
             }
         }
     }
-    private void CheckEnemyInRange(){
+    private void CheckEnemyInRange()
+    {
         objectInRangeAttack = Physics2D.OverlapCircle(attackPoint.position, knightRangeAttack, enemyLayer);
-        if (!(points.pointA.position.x < transform.position.x && points.pointB.position.x> transform.position.x)){
-            if (enemyInRangeAttack){
-                offSideTimer += Time.deltaTime; 
+        if (!(points.pointA.position.x < transform.position.x && points.pointB.position.x > transform.position.x))
+        {
+            if (enemyInRangeAttack)
+            {
+                offSideTimer += Time.deltaTime;
             }
-        }else if(offSideTimer > 2){
+        }
+        else if (offSideTimer > 2)
+        {
             offSideTimer = 0;
         }
         if (offSideTimer < 2)
         {
-            objectInRange = Physics2D.OverlapCircle(transform.position, knightDetection, enemyLayer); 
-        }else{
+            objectInRange = Physics2D.OverlapCircle(transform.position, knightDetection, enemyLayer);
+        }
+        else
+        {
             objectInRange = null;
         }
 
-        if (objectInRange != null && npcManager.knightDamageAble.Contains(objectInRange.tag)){
+        if (objectInRange != null && npcManager.knightDamageAble.Contains(objectInRange.tag))
+        {
             SetPoint(objectInRange.gameObject.transform);
             enemyDetected = true;
-            if(!enemyInRangeAttack){
+            if (!enemyInRangeAttack)
+            {
                 Idle(false);
             }
-        }else if(enemyDetected){
+        }
+        else if (enemyDetected)
+        {
             SetPoint(points.pointA);
             enemyDetected = false;
         }
-        
-        if (objectInRangeAttack != null && npcManager.knightDamageAble.Contains(objectInRangeAttack.tag)){
+
+        if (objectInRangeAttack != null && npcManager.knightDamageAble.Contains(objectInRangeAttack.tag))
+        {
             Idle(true);
             enemyInRangeAttack = true;
-        }else if(enemyInRangeAttack){
-            enemyInRangeAttack = false; 
+        }
+        else if (enemyInRangeAttack)
+        {
+            enemyInRangeAttack = false;
             Idle(false);
         }
     }
@@ -141,13 +166,16 @@ public class KngihtScript : NPC
         Gizmos.DrawWireSphere(attackPoint.position, knightRangeAttack);
     }
 
-    public override void ChangeStatus(Status status){
-       npcManager.InstanceNPC(status, transform.position);
-       points.NPCCount--;
-       npcManager.knightCount--;
-       Destroy(gameObject);
+    public override void ChangeStatus(Status status)
+    {
+
+        npcManager.InstanceNPC(status, transform.position);
+        points.NPCCount--;
+        npcManager.knightCount--;
+        Destroy(gameObject);
     }
-    private void setAnimationParameter(){
+    private void setAnimationParameter()
+    {
         animator.SetFloat("movSpeed", Mathf.Abs(movSpeed));
     }
 }

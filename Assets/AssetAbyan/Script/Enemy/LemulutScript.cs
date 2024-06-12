@@ -86,7 +86,7 @@ public class LemulutScript : Enemy
             IDamagable damagable = objectInRange.GetComponent<IDamagable>();
             if (damagable != null)
             {
-                if(GameObject.FindGameObjectWithTag("Player").GetComponent<Coin>().coinCount >= 0 ){
+                if(GameObject.FindGameObjectWithTag("Player").GetComponent<Coin>().coinCount > 0 ){
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Coin>().decreaseCoin(1);
                 }
                 else{

@@ -58,6 +58,8 @@ MonoBehaviour:
   - Knight
   - Villager
   - Arthamerta
+  - Wall
+  - ArcherTower
   lemulutIdleSet:
   - 4
   - 5
@@ -65,17 +67,20 @@ MonoBehaviour:
   - 2
   gelapari: {fileID: 7231333202436385386, guid: dfc9a6732d607304da45ab7d4ea2ee12, type: 3}
   gelapariCount: 0
-  gelapariMovSpeed: 1
+  gelapariMovSpeed: 2.5
   gelapariDamage: 50
   gelapariAttackSpeed: 3
   gelapariHealth: 500
-  gelapariDetection: 4
-  gelapariRangeAttack: 0.2
+  gelapariDetection: 10
+  gelapariRangeAttack: 1.5
   gelapariDamageAble:
   - Player
   - Knight
   - Archer
   - Villager
+  - Arthamerta
+  - Wall
+  - ArcherTower
   gelapariIdleSet:
   - 4
   - 5
@@ -83,7 +88,7 @@ MonoBehaviour:
   - 2
   widara: {fileID: 4607677558255780103, guid: da4ab1a713978354d80059e2f217a565, type: 3}
   widaraCount: 0
-  widaraMovSpeed: 2
+  widaraMovSpeed: 3
   widaraDamage: 10
   widaraAttackSpeed: 0.5
   widaraHealth: 80

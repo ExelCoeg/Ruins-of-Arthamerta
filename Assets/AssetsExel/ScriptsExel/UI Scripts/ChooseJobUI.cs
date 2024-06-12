@@ -13,17 +13,17 @@ public class ChooseJobUI : MonoBehaviour
 
     public void ChooseKnight(){
         playerRecruit.GetComponent<PlayerRecruit>().getSelectedNPC().GetComponent<NPC>().ChangeStatus(Status.Knight);
-        playerRecruit.GetComponent<Coin>().decreaseCoin(50);
+        playerRecruit.GetComponent<Coin>().decreaseCoin(1);
         gameObject.SetActive(false);
     }
     public void ChooseVillager(){
         playerRecruit.GetComponent<PlayerRecruit>().getSelectedNPC().GetComponent<NPC>().ChangeStatus(Status.Villager);
-        playerRecruit.GetComponent<Coin>().decreaseCoin(20);
+        playerRecruit.GetComponent<Coin>().decreaseCoin(1);
         gameObject.SetActive(false);
     }
     public void ChooseArcher(){
         playerRecruit.GetComponent<PlayerRecruit>().getSelectedNPC().GetComponent<NPC>().ChangeStatus(Status.Archer);
-        playerRecruit.GetComponent<Coin>().decreaseCoin(30);
+        playerRecruit.GetComponent<Coin>().decreaseCoin(1);
         gameObject.SetActive(false);
     }
 }

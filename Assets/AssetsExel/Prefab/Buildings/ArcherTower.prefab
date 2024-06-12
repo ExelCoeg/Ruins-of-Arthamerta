@@ -234,7 +234,7 @@ MonoBehaviour:
   maxLevel: 10
   currentHealth: 0
   currentLevel: 1
-  buildingCost: 15
+  buildingCost: 3
   upgradeCostMultiplier: 2
   upgradeCost: 1
   recoverBuildingCost: 1
@@ -246,6 +246,7 @@ MonoBehaviour:
   buildingInfo: {fileID: 5797811811821554233}
   spriteRenderers:
   - {fileID: 7926827925719793447}
+  archer: {fileID: 0}
 --- !u!1001 &978774585363171300
 PrefabInstance:
   m_ObjectHideFlags: 0

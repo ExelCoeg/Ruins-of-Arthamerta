@@ -43,6 +43,8 @@ public class DayManager : MonoBehaviour
             clock = 0;
             dayCount++;
             SpawnManager.instance.WavesSet(dayCount);
+            NPCManager nPCManager = FindAnyObjectByType<NPCManager>();
+            FindAnyObjectByType<Coin>().coinCount += nPCManager.villagerCount + nPCManager.archerCount + nPCManager.knightCount;
         }
         
         // Transisi ke malam

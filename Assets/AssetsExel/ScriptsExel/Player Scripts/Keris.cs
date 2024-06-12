@@ -33,7 +33,6 @@ public class Keris : MonoBehaviour
     void Start()
     {
         ResetPetirCooldown();
-        lifeEssence = maxLifeEssence;
     }
    
 

@@ -1346,13 +1346,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 952397461504127806, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3500004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748386712045561988, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.8000097
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220360196527386082, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4500025
+      objectReference: {fileID: 0}
     - target: {fileID: 2439644665397476883, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
       propertyPath: parallaxCamera
       value: 
       objectReference: {fileID: 1774202292}
+    - target: {fileID: 3953364885750585931, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4500025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332451236652392825, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.8000097
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781310728595017592, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
     - target: {fileID: 4960301695582908828, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
       propertyPath: m_Name
       value: Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320180695907706341, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.90000486
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034478125674851742, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.2499993
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453912244167126084, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.900005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046262751047132984, guid: 8b74aea0fb3f0a64b8b4226bb9a1715b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.900005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

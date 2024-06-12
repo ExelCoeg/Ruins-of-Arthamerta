@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7323162252873313478}
   - component: {fileID: 6412541717602341308}
   - component: {fileID: 2296900726742987136}
+  - component: {fileID: 7366842114886061607}
   m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
@@ -219,6 +220,19 @@ MonoBehaviour:
   soundType: 7
   volume: 1
   distance: 10
+--- !u!114 &7366842114886061607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4069895183660905929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133b34709b569434881dfbfe1799bc33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!1 &4607677558255780103
 GameObject:
   m_ObjectHideFlags: 0

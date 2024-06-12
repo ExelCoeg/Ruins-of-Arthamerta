@@ -61,7 +61,7 @@ MonoBehaviour:
   villagerMovSpeed: 3
   villagerHealth: 100
   villagerDetection: 0
-  villagerMiningTimeToCoin: 1
+  villagerMiningTimeToCoin: 5
   villagerDamageAble: []
   villagerIdleSet:
   - 1

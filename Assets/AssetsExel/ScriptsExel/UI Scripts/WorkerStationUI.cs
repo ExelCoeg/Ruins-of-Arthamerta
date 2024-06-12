@@ -27,13 +27,13 @@ public class WorkerStationUI : MonoBehaviour
         if(LevelManager.instance.knightLevel >= LevelManager.instance.maxLevel) return;
         NPCManager.instance.knightAttackSpeed += 1.5f;
         NPCManager.instance.knightDamage += 1.5f;
-        playerRecruit.GetComponent<Coin>().decreaseCoin(50);
+        playerRecruit.GetComponent<Coin>().decreaseCoin(2);
         LevelManager.instance.knightLevel++;
     }
     public void UpgradeVillager(){
         if(LevelManager.instance.villagerLevel >= LevelManager.instance.maxLevel) return;
         NPCManager.instance.villagerMiningTimeToCoin -= 0.2f;
-        playerRecruit.GetComponent<Coin>().decreaseCoin(23);
+        playerRecruit.GetComponent<Coin>().decreaseCoin(2);
        
         LevelManager.instance.villagerLevel++;
     }
@@ -41,7 +41,7 @@ public class WorkerStationUI : MonoBehaviour
         if(LevelManager.instance.archerLevel >= LevelManager.instance.maxLevel) return;
         NPCManager.instance.archerAttackSpeed += 1.5f;
         NPCManager.instance.archerDamage += 1.5f;
-        playerRecruit.GetComponent<Coin>().decreaseCoin(10  );
+        playerRecruit.GetComponent<Coin>().decreaseCoin(2);
         LevelManager.instance.archerLevel++;
 
     }
